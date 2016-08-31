@@ -1,0 +1,16 @@
+#Exemple
+# /image : exclure n'importe quel répertoire nommé image, a la RACINE de /var/www/home/120
+# **/image : exclure n'importe quel répertoire nommé 'image' hors RACINE de /var/www/home/120/
+# /image/**/tmp : exclure n'importe quel répertoire nommé 'tmp' situé dans le sous répertoire /tmp
+# *.tmp : exclure tous les fichiers se terminant par '.tmp'
+# Thumbs.db : exclure tous les fichiers nommé 'Thumbs.db' 
+*.tmp
+*.tmp
+Thumbs.db
+tempo
+DIVERS-nonsync
+VRAC
+PDA suite
+Desktop.ini
+Centos-5.0
+medias

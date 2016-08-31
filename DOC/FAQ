@@ -1,0 +1,5 @@
+- > Vous souhaitez exécuter plusieurs type de sauvegarde mais avec des paramétrages diff?rents ?
+
+	- Faire une copie fichier bck.sh en "mon_backup.sh" "cp bck.sh mon_backup.sh" et "chmod +x mon_backup.sh"
+	- Editer & Configurez, le script "mon_backup.sh"
+	- Parameter la tache Cron pour prendre en compte le nouveau fichier

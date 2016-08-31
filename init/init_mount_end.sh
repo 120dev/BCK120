@@ -1,0 +1,1 @@
+exit ${error_OP_MOUNT};

@@ -1,0 +1,51 @@
+PREREQUIS 
+ - > Linux (testé sous Centos4, Centos5, Gentoo, RHLE4)
+ - > Accés root a la machine ou autorisation spécial
+ - > Compétence Requises  = Rien de particulier
+ 
+ - > Rsync, pour vérifier que rsync soit bien installé :
+ 			- > Dans un Shell, tapez "rsync --version"
+ 
+ Vous devez obtenir quelques choses comme ça :
+ 
+		# rsync --version
+				rsync  version 2.6.9  protocol version 29
+				Copyright (C) 1996-2006 by Andrew Tridgell, Wayne Davison, and others.
+				<http://rsync.samba.org/>
+				Capabilities: 64-bit files, socketpairs, hard links, symlinks, batchfiles,
+				              inplace, IPv6, 64-bit system inums, 64-bit internal inums
+				
+				rsync comes with ABSOLUTELY NO WARRANTY.  This is free software, and you
+				are welcome to redistribute it under certain conditions.  See the GNU
+				General Public Licence for details.
+		OU
+		
+		# rsync --version
+		rsync  version 3.0.0  protocol version 30
+		Copyright (C) 1996-2007 by Andrew Tridgell, Wayne Davison, and others.
+		Web site: http://rsync.samba.org/
+		Capabilities:
+		    64-bit files, 64-bit inums, 32-bit timestamps, 64-bit long ints,
+		    socketpairs, hardlinks, symlinks, IPv6, batchfiles, inplace,
+		    append, ACLs, xattrs, iconv, no symtimes
+		
+		rsync comes with ABSOLUTELY NO WARRANTY.  This is free software, and you
+		are welcome to redistribute it under certain conditions.  See the GNU
+		General Public Licence for details.
+
+ 			Sinon rendez vous ici : http://samba.anu.edu.au/rsync/download.html
+ 			
+ 			!!! Avec les versions antèrieure a 2.6.9, il y a des options incompatibles comme "--human-readable" !!!
+
+MISE EN PLACE 
+ - > 3 Etapes sont nécessaire à la bonne exécution de BCK120
+
+- > ETAPE 1 -- Définition des modules
+- > ETAPE 2 -- Personnalisation de la Sauvegarde
+- > ETAPE 3 -- Configuration des modules
+
+INSTALLATION :
+
+1. Décompresser l'archive dans un dossier de votre choix (de préférence dans /home/bck120)
+2. Ajoutez les droits d'exécution au fichier bck.sh : - > "chmod +x /home/bck120.sh"
+2. Editez le fichier bck.sh pour procéder a la configuration.

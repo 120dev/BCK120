@@ -1,0 +1,6 @@
+#Exemple
+# /image : inclure n'importe quel répertoire nommé image, a la RACINE de /var/www/home/120
+# **/image : inclure n'importe quel répertoire nommé 'image' hors RACINE de /var/www/home/120/
+# /image/**/tmp : inclure n'importe quel répertoire nommé 'tmp' situé dans le sous répertoire /tmp
+# *.tmp : inclure tous les fichiers se terminant par '.tmp'
+# Thumbs.db : inclure tous les fichiers nommé 'Thumbs.db' 
