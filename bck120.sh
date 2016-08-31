@@ -29,7 +29,7 @@ VER='0.20';
 #             VOICI LES TROIS ETAPES :                          #
 # ------------------------------------------------------------- #
 # > ETAPE 1 -- > Activation des modules.                        #
-# > ETAPE 2 -- > Paramêtres globaux (nom du backup, ....)       #
+# > ETAPE 2 -- > Paramètrage global (nom du backup, ....)       #
 # > ETAPE 3 -- > Configuration des modules.                     #
 # ------------------------------------------------------------- #
 #################################################################
@@ -45,15 +45,15 @@ VER='0.20';
 # Si vous souhaitez activer un module, indiquez
 # 				TRUE sinon FALSE
 # - > Nom du Backup
-BCK_NAME="WAM-OVH";
+BCK_NAME="< BCK_NAME >";
 
 #-- MODULES
 # - > Synchronisation avec RSYNC ('fichiers/dossiers')
-RSYNC="TRUE";
+RSYNC="FALSE";
 # - > Sauvegarde de vos 'fichiers/dossiers'.
 EXTRA="FALSE";
 # - > Sauvegarde MySQL
-SQL="TRUE";
+SQL="FALSE";
 # - > Choix de l'ordre de lancement des modules.
 # - > Défaut : (RSYNC EXTRA SQL)
 
@@ -74,13 +74,13 @@ ARG_SCRIPT_1_OBLIGATOIRE="FALSE";
 ARG_SCRIPT_1=;
 
 # - > Notification par mail :
-# - > TRUE : Envoi du mail automatiquement à la fin du traitement
-# - > FALSE : Désactive la notification.
+# - > TRUE          : Envoi du mail automatiquement à la fin du traitement
+# - > FALSE         : Désactive la notification.
 # - > ONLY_IF_ERROR : Envoi du mail uniquement en cas d'erreurs.
 NOTIF_MAIL="TRUE"; # Défaut : TRUE
 
-ROTATION="FALSE"; # - > Active la rotation/suppression des données après un certain délai.
-STATS_SERVER="TRUE";   # - > Permet d'avoir des stats du serveur (HDD FREE, MEM FREE, ect ...)
+ROTATION="FALSE";       # - > Active la rotation/suppression des données après un certain délai.
+STATS_SERVER="TRUE";    # - > Permet d'avoir des stats du serveur (HDD FREE, MEM FREE, ect ...)
 
 # - > Permet de lancer un backup uniquement s'il y a suffisamment d'espace disque.
 # - > Exemple : MIN_HDD_FREE=10, signifie que l'espace disque doit être supèrieur à 10% pour démarrer
@@ -96,21 +96,19 @@ SHOW_PASSWORD_LOG="TRUE";
 SRV_SYNC_NTP_TIME="cdns.ovh.net";
 
 
-
 #####################################################################
 # ------------ > ETAPE 2 -- > Init. des paramètres de la sauvegarde #
 #####################################################################
 
 # - > Répertoire racine des sauvegardes
 # - > !!!  <> Les espaces seront automatiquement remplacés par des < _ >
-# - > Ex : "/BCK120 TEST" devient "/BCK120_TEST"
 VAR_CHROOT="/data/BCK120";
 
 # - > Chroot de BCK120
 VAR_BCK_CHROOT="/data/bck120";
 
 # - > Est ce que < VAR_CHROOT >, est un lecteur réseau ?
-# - > Très pratique lors de montage d'une source externe (SMB,NFS,...)
+# - > Très pratique lors de montage d'une source externe (SMB,NFS,SSHFS...)
 # - > Si le lecteur réseau n'est pas trouvé en tant que dossier monté la sauvegarde sera interrompu.
 VAR_CHROOT_MOUNT="FALSE";
 ARG_SCRIPT_MOUNT=;
@@ -131,7 +129,7 @@ NBR_VERSION=1
 PREFIX_VERSION="volume";
 
 #ne pas modifier
-source "${VAR_BCK_CHROOT}/lib-bash/function.sh"; if [ ${?} != 0 ]; then echo "DIE !! Probleme de chargement du fishier '${VAR_BCK_CHROOT}/lib-bash/function.sh'"; exit 1; fi; trap 'KILLBCK' 2; autoload_conf "${VAR_BCK_CHROOT}/init/init-start.sh";
+source "${VAR_BCK_CHROOT}/lib-bash/function.sh"; if [ ${?} != 0 ]; then echo "DIE !! Probleme de chargement du fichier '${VAR_BCK_CHROOT}/lib-bash/function.sh'"; exit 1; fi; trap 'KILLBCK' 2; autoload_conf "${VAR_BCK_CHROOT}/init/init-start.sh";
 #ne pas modifier
 
 #########################################################
