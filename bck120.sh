@@ -390,8 +390,6 @@ fi
 
 if [ "${NOTIF_MAIL}" != "FALSE" ]
 then
-  #MAIL_TO="120@caledonien.org";
- # MAIL_TO="log@sofinor.nc";
  	MAIL_TO="120@dev.nc";
 
 	MAIL_SUJET="[BCK120] -> Rapport de la Sauvegarde ${BCK_NAME}";
